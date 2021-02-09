@@ -1,0 +1,30 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.output {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.output > div {
+	height: 400px;
+	width: 400px;
+	display: flex;
+	flex-direction: column;
+}
+
+.value {
+	display: inline-block;
+	height: 75px;
+	width: 75px;
+	font-size: 2rem;
+	border: 0.5px solid black;
+	text-align: center;
+	margin: auto;
+}
