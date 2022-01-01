@@ -45,7 +45,7 @@ function init() {
 }
 init();
 // for pc users...
-document.addEventListener('keyup', (e) => {
+document.addEventListener('keyup', e => {
 	const mutableArray = [...state];
 
 	const canContinue = mutableArray.reduce((rowsum, row, i) => {
@@ -95,12 +95,12 @@ document.addEventListener('keyup', (e) => {
 function displayResult(mutableArray) {
 	const div = document.querySelector('.output > div');
 	div.innerHTML = '';
-	mutableArray.forEach((row) => {
+	mutableArray.forEach(row => {
 		const divNew = document.createElement('div');
-		row.forEach((el) => {
+		row.forEach(el => {
 			const innerDiv = document.createElement('div');
 			innerDiv.classList.add('value');
-			innerDiv.innerHTML += `${el}`;
+			innerDiv.innerHTML += `${el ? 2 ** el : 0}`;
 			innerDiv.style.backgroundColor = colors[el];
 			divNew.append(innerDiv);
 		});
